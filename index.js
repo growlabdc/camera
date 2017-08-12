@@ -10,7 +10,7 @@ try {
 const express = require('express')
 const app = express()
 const http = require('http').Server(app)
-const logplease = require('logplease')
+const Logger = require('logplease')
 
 const camera_capture = require('./camera')
 

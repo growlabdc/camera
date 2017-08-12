@@ -13,6 +13,7 @@ const http = require('http').Server(app)
 const Logger = require('logplease')
 
 const camera_capture = require('./camera')
+const upload = require('./upload')
 
 const logger = Logger.create('server')
 
@@ -25,3 +26,4 @@ http.listen(config.port, function() {
 })
 
 setInterval(camera_capture, config.capture_interval)
+setInterval(upload, config.upload_interval)

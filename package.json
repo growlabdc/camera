@@ -10,6 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.4",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^20.1.0",
+    "jsonfile": "^3.0.1",
     "logplease": "^1.2.13",
     "pi-camera": "^1.0.1"
   }

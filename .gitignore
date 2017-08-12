@@ -5,3 +5,4 @@ tmp/
 
 package-lock.json
 config.js
+tokens.json

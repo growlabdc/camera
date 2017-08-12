@@ -1,21 +1,30 @@
 const PiCamera = require('pi-camera');
 const config = require('./config')
+const Logger = require('logplease')
+
+const logger = Logger.create('camera')
 
 
 module.exports = () => {
-  const myCamera = new PiCamera({
+  const camera = new RaspiCam({
+    encoding: config.image.encoding,
     mode: 'photo',
     output: config.image_path,
-    width: config.image.width,
-    height: config.image.height,
-    encoding: config.image.encoding,
-    nopreview: true
+    timeout: 0
   })
-  
 
-  myCamera.snap().then((result) => {
-    console.log(result)
-  }).catch((error) => {
-    console.log(err)
+  camera.start()
+
+  camera.stop()
+
+  camera.on('start', function(){
+    logger.info('capture started')
+  })
+
+  camera.on('read', function(err, timestamp, filename){
+    if (err)
+      logger.error(err)
+
+    logger.info(`capture completed: ${timestamp} - ${filename}`)
   })
 }

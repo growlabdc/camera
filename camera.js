@@ -15,10 +15,6 @@ module.exports = () => {
     timeout: 0
   })
 
-  camera.start()
-
-  camera.stop()
-
   camera.on('start', function(){
     logger.info('capture started')
   })
@@ -29,4 +25,6 @@ module.exports = () => {
 
     logger.info(`capture completed: ${timestamp} - ${filename}`)
   })
+
+  camera.start()  
 }

@@ -17,7 +17,7 @@ const upload = require('./upload')
 
 const logger = Logger.create('server')
 
-app.get('/image.jpg', (req, res) => {
+app.get('/image.png', (req, res) => {
   res.sendFile(config.image_path)
 })
 

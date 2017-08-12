@@ -1,4 +1,4 @@
-const PiCamera = require('pi-camera');
+const RaspiCam = require('raspicam')
 const config = require('./config')
 const Logger = require('logplease')
 

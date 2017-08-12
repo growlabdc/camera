@@ -10,6 +10,8 @@ module.exports = () => {
     encoding: config.image.encoding,
     mode: 'photo',
     output: config.image_path,
+    width: config.image.width,
+    height: config.image.height,
     timeout: 0
   })
 

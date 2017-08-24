@@ -18,6 +18,7 @@ const upload = require('./upload')
 const logger = Logger.create('server')
 
 app.get('/', (req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=' + (config.capture_interval / 1000));
   res.sendFile(config.image_path)
 })
 

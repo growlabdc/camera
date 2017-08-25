@@ -160,7 +160,7 @@ function run(opts, cb) {
 	}	
       }
 
-      videoshow(images, videoOptions).save(opts.video_path).on('start', function (command) {
+      videoshow(images, videoOptions).option('-strict -2').save(opts.video_path).on('start', function (command) {
 	logger.info('ffmpeg process started:', command)
       }).on('error', function (err, stdout, stderr) {
 	logger.error('Error:', err)

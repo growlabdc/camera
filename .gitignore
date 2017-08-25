@@ -3,7 +3,9 @@ node_modules/
 
 tmp/
 
+*.mp4
 package-lock.json
 config.js
 tokens.json
 image.png
+client_secret.json

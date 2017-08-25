@@ -13,5 +13,14 @@ module.exports = {
   clientId: '',
   clientSecret: '',
   redirectUrl: '',
-  drive_folder_id: ''
+  drive_folder_id: '',
+  gmail: {
+    user: '',
+    to: '',
+    clientId: '',
+    clientSecret: '',
+    refreshToken: '',
+    accessToken: '',
+    expires: null
+  }  
 }

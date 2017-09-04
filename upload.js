@@ -45,7 +45,7 @@ const upload = function() {
 
   const media = {
     mimeType: 'image/png',
-    body: fs.createReadStream(config.image_path)
+    body: fs.createReadStream(config.image.output)
   }
 
   drive.files.create({

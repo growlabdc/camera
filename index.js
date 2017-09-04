@@ -19,7 +19,7 @@ const logger = Logger.create('server')
 
 app.get('/', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=' + (config.capture_interval / 1000));
-  res.sendFile(config.image_path)
+  res.sendFile(config.image.output)
 })
 
 http.listen(config.port, function() {

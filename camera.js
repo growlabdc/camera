@@ -6,14 +6,7 @@ const logger = Logger.create('camera')
 
 
 module.exports = () => {
-  const camera = new RaspiCam({
-    encoding: config.image.encoding,
-    mode: 'photo',
-    output: config.image_path,
-    width: config.image.width,
-    height: config.image.height,
-    timeout: 0
-  })
+  const camera = new RaspiCam(config.image)
 
   camera.on('start', function(){
     logger.info('capture started')
